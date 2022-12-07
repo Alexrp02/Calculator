@@ -3,7 +3,7 @@ body{
     margin-top: 0;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: 'Calculator', sans-serif;
     font-weight: bold;
 }
@@ -37,7 +37,7 @@ h1{
 #numbers {
     height: 45vh;
     gap: 10px;
-    background-color: rgb(68, 68, 235);
+    background-color: rgb(103, 73, 238);
     padding: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -58,24 +58,30 @@ h1{
     background-color: rgb(120, 120, 255);
 }
 
+.operand {
+    background-color: rgb(120, 120, 252) ;
+}
+.operand:active {
+    background-color: rgb(106, 106, 252) ;
+}
+
 #screen {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 20%;
-    background-color: rgb(68, 68, 235);
+    background-color: rgb(103, 73, 238);
     border-bottom: 1px solid black;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 #subscreen {
-    box-sizing: border-box;
+    overflow: auto;
+    white-space: nowrap;
     padding: 10px;
     margin: 20px;
-    display: inline-block;
-    text-align: end;
-    /* inline-size: 90%; */
-    word-wrap: break-word;
+    display: flex;
+    justify-content: flex-end;
     font-size: 50px;
     width: 90%;
     min-height: 80%;
@@ -88,4 +94,11 @@ h1{
 }
 #clear:active {
     background-color: rgb(169, 35, 35);
+}
+
+#equal {
+    background-color: rgb(96, 96, 252) ;
+}
+#equal:active {
+    background-color: rgb(78, 78, 250) ;
 }
