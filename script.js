@@ -46,6 +46,7 @@ document.addEventListener("keydown", e => {
     if(e.key>=0 || e.key<=9)
         putNumber(e.key) ;
     if(e.key == "+" || e.key == "-" || e.key == "*" || e.key == "/")
+        e.preventDefault() ;
         putOperand(e.key) ;
     if(e.key == "=" || e.key == "Enter")
         equalPush() ;
